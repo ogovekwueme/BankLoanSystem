@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Dashboard - {{ username }}</title>
+  </head>
+  <body>
+      <center>
+    <h1>Welcome, {{ username }}</h1>
+     <a href="{{ url_for('custloan)}}">Customer Loan</a>
+ 
+      <br /><br />
+      <a href="{{ url_for('home')}}">Logout</a>
+    </center>
+  </body>
+</html>

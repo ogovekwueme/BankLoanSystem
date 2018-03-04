@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Bank Loan Home Page</title>
+  </head>
+  <body>
+    <center>
+      <h1>Welcome to the Bank Loan System App</h1>
+      <p>Please login</p>
+    <form name='login' method='post' action='/homepage'>
+        Username: <input name='username' /><br />
+        Password <input type='password' name='password' /><br />
+        <input type="hidden" name="login" value="login"/>
+        <input type='submit' name='submit' value='submit' /><br />
+      </form>
+    <a href="{{url_for('register')  }}">Register</a>
+    </center>
+  </body>
+</html>
