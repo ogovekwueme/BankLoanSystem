@@ -10,7 +10,7 @@ else:
     sql = '''
         create table if not exists staff (
           id integer primary KEY autoincrement,
-          bankid integer,
+          bankid integer unique,
           username varchar(255),
           password varchar(255),
           name varchar(255),
@@ -37,7 +37,9 @@ else:
         last_major_derog_none integer,
         revol_util real,
         total_rec_late_fee real,
-        safe_loans integer
+        safe_loans integer,
+        staff_id integer,
+        foreign key (staff_id) references staff(id)
       )
     '''
 

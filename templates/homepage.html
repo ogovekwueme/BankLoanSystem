@@ -5,8 +5,14 @@
   <body>
       <center>
     <h1>Welcome, {{ username }}</h1>
-     <a href="{{ url_for('custloan)}}">Customer Loan</a>
- 
+        <a href="{{ url_for('customer')}}"> Customer Processing...</a>
+        <br /><br />
+       {% for row in rows %}
+       <p><b>Bank ID:</b> {{ row[1]}}</p>
+        <p><b>Username:</b> {{ row[2]}}</p>
+        <p><b>Name:</b> {{ row[4] }}</p>
+         <p><b>Designation:</b> {{ row[5]}}</p>
+        {% endfor %}
       <br /><br />
       <a href="{{ url_for('home')}}">Logout</a>
     </center>
