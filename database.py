@@ -25,7 +25,7 @@ else:
         create table if not exists customer (
           id integer primary KEY autoincrement,
           name varchar(255),
-        grade,
+        grade iteger,
         sub_grade varchar(2),
         short_emp integer,
         emp_length_num integer,

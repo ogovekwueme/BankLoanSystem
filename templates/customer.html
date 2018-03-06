@@ -3,7 +3,73 @@
     <title>Customer Page</title>
   <body>
 
+        <center>
     <h1>Welcome to the Customer Page</h1>
+        <form method="post" action="{{ url_for('results',staff_id=staffid)}}"> 
+     <label>Name:</label> <input type="text" name="name" /><br />
+        <label>Grade:</label><select name="grade" >
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+               <option>E</option>
+               <option>F</option>
+              <option>G</option>
+            </select><br />
+        <label>Sub Grade:</label><select name=:Ssub_grade :>
+                 {% for i in ['A','B','C','D','E','F','G'] %}
+                  {% for j in ['1','2','3','4','5'] %}
+                   <option>{{ i+j }}</option>
+                  {% endfor %}
+                {% endfor %}
+              </select><br />
+        <label>Time of Employment:</label><select name="short_emp">
+               <option value="0">Less than 1 year</option>
+               <option value="1">1 year and above</option>
+             </select> <br />
+        <label>Length of Employment:</label> <select name="emp_length_num">
+             {% for i in range(12) %}
+               <option>{{ i }}</option>
+            {% endfor %}
+            </select><br />
+        <label>Home Owner:</label> <select name="home_ownership">
+                <option>MORTGAGE</option>
+                <option>RENT</option>
+                 <option>OWN</option>
+            </select><br />
+        <label>Debt to Income Ratio:</label> <input name="dti" /><br />
+
+        <label>Purpose of Loan:</label> <select name="purpose">
+            <option>debt_consolidation</option>
+            <option>credit_card</option>
+            <option>home_improvement</option>
+            <option>major_purchase</option>
+           <option>small_business</option>
+           <option>car</option>
+             <option>medical</option>
+             <option>wedding</option>
+              <option>moving</option>
+            <option>house</option>
+              <option>vacation</option>
+           </select> <br />
+        <label>Term:</label> <select name="term">
+            <option>36 months</option>
+           <option>60 months</option>
+          </select><br />
+        <label>Is Borrower Delinquest?</label> select name="last_delinq_none">
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+           </select><br />
+        <label>Has Borrower had 90 day or worseRating?</label> 
+          <select name="last_major_derog_none integer,">
+             <option value="0">No</option>
+             <option value="1">Yes</option>
+          </select><br />
+        <label>Percentage of Available Credit Used:</label> <input name="revol_util"/><br />
+        <label>Late Fees Received:<label> <input name="total_rec_late_fee" /><br />
+        <input name="staff_id" type="hidden"  value="{{ staffid }}" />
+        </form>
+        </center>
   </body>
   </head>
 </html>
