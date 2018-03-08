@@ -5,6 +5,12 @@
   <body>
     <center>
         <h1>Results for {{ custname }}</h1>
+    <h3>Staff ID: {{ staff_id }}</h3>
+    {% if safe_loan == 1: %}
+      <p>Results for customer: Yes</p>
+  {% else: %}
+      <p>Results for customer: No</p>
+    {% endif %}
 
     </center>
   <body>

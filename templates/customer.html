@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>Customer Page</title>
@@ -56,18 +57,19 @@
             <option>36 months</option>
            <option>60 months</option>
           </select><br />
-        <label>Is Borrower Delinquest?</label> select name="last_delinq_none">
+        <label>Is Borrower Delinquent q:</label> <select name="last_delinq_none">
               <option value="0">No</option>
               <option value="1">Yes</option>
            </select><br />
         <label>Has Borrower had 90 day or worseRating?</label> 
-          <select name="last_major_derog_none integer,">
+          <select name="last_major_derog_none">
              <option value="0">No</option>
              <option value="1">Yes</option>
           </select><br />
         <label>Percentage of Available Credit Used:</label> <input name="revol_util"/><br />
         <label>Late Fees Received:<label> <input name="total_rec_late_fee" /><br />
-        <input name="staff_id" type="hidden"  value="{{ staffid }}" />
+        <input name="staff_id" type="hidden"  value="{{ staffid }}" /><br />
+      <input type="submit" name="submit" value="submit" /> <br />
         </form>
         </center>
   </body>
